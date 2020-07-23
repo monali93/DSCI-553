@@ -1,1 +1,10 @@
+Execution commands
 
+Task1
+Python: $ spark-submit task1.py <input_file> <output_file> <stopwords> <y> <m> <n>
+
+Task2
+Python: $ spark-submit task2.py <review_file> <business_file > <output_file> <if_spark> <n>
+
+Task3
+Python: $ spark-submit task3.py <input_file> <output_file> <partition_type> <n_partitions> <n>
