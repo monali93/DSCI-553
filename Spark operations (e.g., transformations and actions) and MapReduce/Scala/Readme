@@ -1,1 +1,10 @@
+Execution commands
 
+Task1
+Scala:  $ spark-submit --class task1 hw1.jar <input_file> <output_file> <stopwords> <y> <m> <n> 
+
+Task2
+Scala:  $ spark-submit --class task2 hw1.jar <review_file> <business_file> <output_file> <if_spark> <n>
+
+Task3
+Scala:  $ spark-submit --class task3 hw1.jar <input_file> <output_file> <partition_type> <n_partitions> <n>
