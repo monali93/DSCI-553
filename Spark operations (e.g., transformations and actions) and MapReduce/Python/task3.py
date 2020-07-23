@@ -25,10 +25,10 @@ def sub_tasks(review_rdd, output_file, partition_type, n_part, n):
 
     elif str(partition_type) == "customized":
         r = review_rdd.map(lambda x: (x['business_id'], 1)).partitionBy(int(n_part),
-                                                                        lambda x: ord(x[-1])).persist()
+                                                                        lambda x: ord(x[-1])).reduceByKey(lambda x, y: x + y).filter(lambda x: x[1] > int(n)).persist()
         n_items = r.glom().map(len).collect()
 
-        result = r.reduceByKey(lambda x, y: x + y).filter(lambda x: x[1] > int(n)).collect()
+        result = r.collect()
 
         output = {
             "n_partitions": int(n_part),
