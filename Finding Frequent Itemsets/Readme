@@ -1,0 +1,3 @@
+Finding Frequent Itemsets
+
+Implement the SON algorithm using the Apache Spark Framework to find frequent itemsets on the Yelp Challenge Datasets and used Apriori algorithm as the primary algorithm in SON.
