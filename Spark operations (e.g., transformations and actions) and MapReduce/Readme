@@ -1,0 +1,4 @@
+Performed following tasks on the Yelp Challenge Datasets
+1) Data Exploration :- to find the number of reviews in a given year, y, the number of distinct users who have written the reviews, top m users who have the largest number of reviews and its count, top n frequent words in the review text.
+2) Exploration on Multiple Datasets :- to explore the two datasets together (i.e., review and business) and compute the average stars for each business category and output top n categories with the highest average star, also wrote a version without Spark and a version with Spark and compare their performance.
+3) Customized Partitioning- to improve the computational efficiency (i.e., reducing the time duration of execution) in order to compute the businesses that have more than n reviews in the review file.
