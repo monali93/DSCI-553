@@ -8,3 +8,5 @@ Scala:  $ spark-submit --class task2 hw1.jar <review_file> <business_file> <outp
 
 Task3
 Scala:  $ spark-submit --class task3 hw1.jar <input_file> <output_file> <partition_type> <n_partitions> <n>
+
+
