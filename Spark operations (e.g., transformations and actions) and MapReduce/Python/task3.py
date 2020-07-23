@@ -5,6 +5,7 @@ import sys
 
 def sub_tasks(review_rdd, output_file, partition_type, n_part, n):
     if str(partition_type) == "default":
+        start = time.time()
         n_partitions = review_rdd.map(lambda x: (x['business_id'], 1)).groupByKey().map(lambda x: (x[0], len(x[1]))) \
             .filter(lambda x: x[1] > int(n)).getNumPartitions()
 
@@ -19,11 +20,14 @@ def sub_tasks(review_rdd, output_file, partition_type, n_part, n):
             "n_items": n_items,
             "result": result,
         }
+        end = time.time()
+        print("Customized timing: ", end - start)
 
         with open(str(output_file), "w+") as fileout:
             json.dump(output, fileout, indent=4)
 
     elif str(partition_type) == "customized":
+        start = time.time()
         r = review_rdd.map(lambda x: (x['business_id'], 1)).partitionBy(int(n_part),
                                                                         lambda x: ord(x[-1])).reduceByKey(lambda x, y: x + y).filter(lambda x: x[1] > int(n)).persist()
         n_items = r.glom().map(len).collect()
@@ -35,6 +39,8 @@ def sub_tasks(review_rdd, output_file, partition_type, n_part, n):
             "n_items": n_items,
             "result": result,
         }
+        end = time.time()
+        print("Customized timing: ", end - start)
 
         with open(str(output_file), "w+") as fileout:
             json.dump(output, fileout, indent=4)
