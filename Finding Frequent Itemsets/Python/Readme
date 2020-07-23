@@ -1,1 +1,8 @@
+Execution example:
+
+Task1
+Python:  spark-submit task1.py  <case number> <support> <input_file_path> <output_file_path> 
+
+Task2
+Python:  spark-submit task2.py  <filter threshold> <support> <input_file_path> <output_file_path>
 
