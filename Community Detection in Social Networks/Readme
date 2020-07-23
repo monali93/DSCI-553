@@ -1,1 +1,1 @@
-
+Explored spark GraphFrames library as well as implemented own Girvan-Newman algorithm using the Spark Framework to detect communities in graphs.
