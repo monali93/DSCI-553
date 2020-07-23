@@ -1,0 +1,6 @@
+Performed following tasks:
+1) Min-Hash + LSH :- to identify business pairs whose Jaccard similarity is >= 0.05
+
+2) Content-based Recommendation System :- generated user and item profile vectors from review texts and use the model to predict if a user prefers to review a given business, when cosine similarity between the user and item profile vectors is >= 0.01
+
+3) Collaborative Filtering Recommendation System :- implemented both Item-based CF recommendation system and User-based CF recommendation system with Min-Hash LSH to predict the ratings for a pair of user and business.
