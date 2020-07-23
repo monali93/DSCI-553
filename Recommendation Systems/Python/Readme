@@ -1,1 +1,34 @@
+Execution Commands
+
+Task1
+Python: $ spark-submit task1.py <input_file> <output_file>
+<input_file>: the train review set <output_file>: the similar business pairs and their similarities
+
+
+
+Task2 - Training commands
+Python: $ spark-submit task2train.py <train_file> <model_file> <stopwords>
+
+<train_file>: the train review set <model_file>: the output model <stopwords>: containing the stopwords that can be removed
+
+
+
+Task2 - Predicting commands
+Python: $ spark-submit task2predict.py <test_file> <model_file> <output_file>
+
+<test_file>: the test review set (only target pairs)  <model_file>: the model generated during the training process <output_file>: the output results
+
+
+
+Task3 - Training commands
+Python: $ spark-submit task3train.py <train_file> <model _file> <cf_type>
+
+<train_file>: the train review set <model_file>: the output model <cf_type>: either “item_based” or “user_based"
+
+
+
+Task3 - Predicting commands
+Python: $ spark-submit task3predict.py <train_file> <test_file> <model_file> <output_file> <cf_type>
+
+<train_file>: the train review set <test_file>: the test review set (only target pairs) <model_file>: the model generated during the training process <output_file>: the output results <cf_type>: either “item_based” or “user_based”
 
